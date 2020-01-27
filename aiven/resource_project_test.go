@@ -55,7 +55,7 @@ func TestAccAivenProject_basic(t *testing.T) {
 				Config: testAccProjectResource(rName),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckAivenProjectAttributes("data.aiven_project.project"),
-					resource.TestCheckResourceAttr(resourceName, "project", fmt.Sprintf("pr-%s", rName)),
+					resource.TestCheckResourceAttr(resourceName, "project", fmt.Sprintf("test-acc-pr-%s", rName)),
 				),
 			},
 		},
